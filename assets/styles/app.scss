@@ -1,0 +1,1019 @@
+
+// breakpoint sass
+@import '../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss';
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+$bg-color: #F3F3F4;
+$theme-color: #0C273A;
+$orange-color: #E37224;
+$color-orange: #E37224;
+$color-brown: #AA967D;
+$color-blue-dark: #0A2C42;
+$color-blue-medium: #313D42;
+$color-green: #7FA0A6;
+$color-pink: #DC7376;
+$color-red: #C23235;
+
+.red { color: $color-red; }
+.brown { color: $color-brown; }
+.green { color: $color-green; }
+.orange { color: $color-orange; }
+.blue-dark { color: $color-blue-dark; }
+
+$device-xs-up: 320px;
+$device-xs-only: 320px 767px;
+$device-md-up: 768px;
+$device-md-only: 768px 1439px;
+$device-xl-up: 1440px;
+
+$xs: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$font-ai: 'Poiret One', cursive;
+$font-noto: 'Noto Sans TC', Helvetica, Arial, sans-serif;
+$font-mix: 'Poiret One', cursive, 'Noto Sans TC', sans-serif;
+$font-context:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+.clearfix::before,
+.clearfix::after {
+	flex-basis: 0;
+	order: 1;
+}
+
+@mixin scale($factor) {
+	-webkit-transform: scale($factor);
+	-moz-transform: scale($factor);
+	-ms-transform: scale($factor);
+	-o-transform: scale($factor);
+	transform: scale($factor);
+}
+
+@mixin transform-origin{
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+@mixin responsive-image($image, $xsw, $xsh, $mdw, $mdh, $xlw, $xlh) {
+	@include breakpoint($device-xs-only) {
+		@if $xsw or $xsw {
+			width: $xsw;
+			height: $xsh;
+			background-size: $xsw $xsh;
+		}
+		@else {
+			display: none;
+		}
+
+	}
+	@include breakpoint($device-md-only) {
+		@if $mdw or $mdw {
+			width: $mdw;
+			height: $mdh;
+			background-size: $mdw $mdh;
+		}
+		@else {
+			display: none;
+		}
+	}
+	@include breakpoint($device-xl-up) {
+		@if $xlw or $xlw {
+			width: $xlw;
+			height: $xlh;
+			background-size: $xlw $xlh;
+		}
+		@else {
+			display: none;
+		}
+	}
+}
+
+@mixin common-image($image, $xsw, $xsh, $mdw, $mdh, $xlw, $xlh) {
+	background: url('../images/' + $image + '.png');
+	@include responsive-image($image, $xsw, $xsh, $mdw, $mdh, $xlw, $xlh);
+}
+
+@mixin seperate-image($image, $xsw, $xsh, $mdw, $mdh, $xlw, $xlh) {
+	@include breakpoint($device-xs-only) {
+		background: url('../images/mobile/' + $image + '.png');
+	}
+	@include breakpoint($device-md-only) {
+		background: url('../images/tablet/' + $image + '.png');
+	}
+	@include breakpoint($device-xl-up) {
+		background: url('../images/desktop/' + $image + '.png');
+	}
+	@include responsive-image($image, $xsw, $xsh, $mdw, $mdh, $xlw, $xlh);
+}
+
+* {
+	-webkit-overflow-scrolling: touch;
+}
+
+// adjustment
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden; 
+	background-color: $bg-color;
+	font-family: $font-noto;
+	font-weight: 400;
+	font-size: 15px;
+	@include breakpoint($xs) {
+		font-size: 16px;
+	}
+	line-height: 1.7;
+	letter-spacing: 1.33;
+}
+
+img {
+	max-width: 100%;
+}
+
+header.fixed-nav {
+	position: relative;
+	width: 100%;
+	nav {
+		text-align: center;
+		padding: 1.5rem;
+		.navbar-brand {
+			margin-right: 1.75rem;
+			margin-left: 1rem;
+		}
+		.nav-item {
+			position: relative;
+			display: inline-block;
+			padding: .25rem 1.25rem;
+			a {
+				font-size: 14px;
+				color: $theme-color;
+				text-decoration: none;
+				&:hover {
+					color: $orange-color;
+				}
+			}
+			&.active {
+				a {
+					color: $color-orange;
+				}
+			}
+		}
+		.nav-link {
+			display: inline;
+		}
+		.nav-item-new {
+			position: absolute;
+			top: -.25rem;
+			color: red;
+			letter-spacing: 1px;
+			font-weight: 700;
+			margin-left: -0.75rem;
+		}
+	}
+}
+
+#topic {
+	margin-top: 1rem;
+	@include breakpoint($md) {
+		margin-top: 0rem;
+		background: #eee;
+		padding: 3rem 0;
+	}
+	position: relative;
+	.topic-content {
+		text-align: center;
+		margin-bottom: 2rem;
+		@include breakpoint($md) {
+			text-align: left;
+			margin-bottom: 0;
+		}
+		.date {
+			font-family: $font-ai;
+			font-size: 16px;
+			letter-spacing: 0.8px;
+			line-height: 18px;
+			@include breakpoint($device-xl-up) {
+				font-size: 16px;
+				letter-spacing: 1.33px;
+			}
+		}
+		.date-line {
+			display: inline-block;
+			border-bottom: 1px solid #0C273A;
+			height: 1px;
+			width: 30px;
+			@include breakpoint($device-md-up) {
+				width: 40px;
+			}
+			@include breakpoint($device-xl-up) {
+				width: 49px;
+			}
+			margin: 8px 5px;
+		}
+		.place {
+			display: block;
+			font-weight: 300;
+			font-family: $font-noto;
+			font-size: 16px;
+			letter-spacing: 5px;
+			line-height: 24px;
+			@include breakpoint($device-xl-up) {
+				font-size: 16px;
+				letter-spacing: 7.5px;
+			}
+		}
+		.year {
+			font-family: $font-ai;
+			font-size: 1.25rem;
+			margin-bottom: 1rem;
+		}
+		.topic-tag {
+			margin-top: 3rem;
+			color: $color-brown;
+		}
+		.topic {
+			width: 233px;
+			height: auto;
+		}
+		.topic-english {
+			font-family: $font-ai;
+			font-size: 1.5rem;
+			margin-top: .75rem;
+			margin-bottom: 3rem;
+			line-height: 21px;
+			letter-spacing: 1.5px;
+		}
+		.topic-slogan {
+			margin: 0 auto;
+		}
+
+	}
+	  //  <div class="h-gear"></div>
+			// <div class="h-l"></div>
+			// <div class="h-line"></div>
+			// <div class="h-robot"></div>
+			// <div class="h-t"></div>
+			// <div class="h-oil"></div>
+			.components {
+				.h-gear {
+					position: absolute;
+					left: 5vh;
+					top: 20vh;
+					z-index: 10;
+					width: 116px;
+				}
+				.h-gear-red {
+					position: absolute;
+					right: 20vh;
+					top: 80vh;
+					z-index: 10;
+					width: 107px;
+				}
+				.h-l {
+					position: absolute;
+					right: 35vh;
+					top: 65vh;
+					z-index: 10;
+					width: 123px;
+				}
+				.h-line {
+					position: absolute;
+					left: 5vh;
+					top: 40vh;
+					z-index: 10;
+					width: 44px;
+				}
+				.h-robot {
+					position: absolute;
+					left: 30vh;
+					top: 70vh;
+					z-index: 10;
+					width: 95px;
+				}
+				.h-t {
+					position: absolute;
+					left: 35vh;
+					top: 15vh;
+					z-index: 10;
+					width: 139px;
+				}
+				.h-oil {
+					position: absolute;
+					right: 35vh;
+					top: 20vh;
+					z-index: 10;
+					width: 67px;
+				}
+			}	
+			.topic-background {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+
+
+#timeline {
+	
+	margin-top: 1rem;
+	.scroll	{
+		overflow-x: scroll;
+		-webkit-touch-overflow: scroll;
+		width: 100%;
+	}
+	.block-title {
+		margin-top: 2rem;
+		font-family: $font-ai;
+	}
+	margin-bottom: 6rem;
+	.inner {
+		position: relative;
+		width: 1120px;
+		max-width: 1120px;
+		
+		
+		padding: 0px;
+		display: grid;
+		grid-template-columns: repeat(2, auto) 220px 100px 100px 100px auto;
+		grid-template-rows: 50px 50px 50px;
+		align-items: center;
+		text-align: center;
+		font-weight: 300;
+		.highlight-area{
+			z-index: 1;
+			position: absolute;
+			grid-row: 1 / 4;
+			grid-column: 3 / 7;	
+			width: 100%;
+			height: 100%;
+			background: #DF6621;
+			color: white;
+		}
+		.axis {
+			z-index: 2;
+			position: absolute;
+			grid-row: 2 / 2;	
+			grid-column: 1 / end;
+			height: 32px;
+			width: 100%;	
+			background: #A08B72;
+		}
+
+		.date{ 
+			z-index: 3;
+			grid-row: 1;
+			align-self: end;
+			color: #DF6621;
+			font-size: 1.5rem; 
+			font-family: $font-ai;
+		}
+		.date.reverse{ color: white}
+
+		.name{ 
+			grid-row: 2;
+			z-index: 3;
+			background: #A08B72;
+			line-height: 32px;
+			color: white;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+
+		}
+		.name.feature{
+			background-color: #2B353A;
+			padding-top: 0.3rem;
+			padding-bottom: 0.3rem;
+
+			border-radius: 3px;
+		}
+		.name.lecture{
+			background-color: #74969C;
+			padding-top: 0.3rem;
+			padding-bottom: 0.3rem;
+			border-radius: 3px;
+		}
+
+		.slogan{
+			z-index: 3;
+			grid-row: 3;
+			grid-column: 3/7;
+			color: white;
+			letter-spacing: 5px;
+		}
+		.intro{
+			grid-row: 4;
+			grid-column: 3/7;
+			color: #DF6621;
+		}
+
+	}
+}
+
+
+#intro {
+
+	margin-top: 1rem;
+	@include breakpoint($xs) {
+		margin-top: 5rem;
+	}
+
+	.intro-img {
+		margin: 4rem 0;
+
+	}
+
+	.intro-title {
+		font-family: $font-ai;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.intro-content {
+		color: $color-brown;
+		p {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+}
+.block-title {
+		line-height: 1.7;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+
+#projects {
+
+	
+	margin-top: 1rem;
+	@include breakpoint($xs) {
+		margin-top: 4rem;
+	}
+
+	.project-title {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.125rem;
+		a {
+			text-decoration: none;
+			color: $color-blue-dark;
+		}
+		// font-family: $font-noto;
+	}
+
+	.project-description {
+		font-size: 0.9rem;
+		color: $color-brown;
+		// font-family: $font-noto;
+	}
+
+	.project-info {
+		margin-bottom: 3rem;
+		font-size: 0.9rem;
+		color: $color-orange;
+		.place {
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+}
+
+footer {
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+	color: $color-blue-medium;
+	.media {
+		.facebook {
+			text-align: center;
+		}
+		display: block;
+		@include breakpoint($md) {
+			display: flex;
+		}
+	}
+	.copyright {
+		margin-top: 2rem;
+		text-align: center;
+		color: $color-brown;
+		letter-spacing: 3px;
+	}
+	a {
+		color: $color-blue-dark;
+		text-decoration: none;
+		transition: .07s;
+		&:hover {
+			text-decoration: none;
+			color: $color-orange;
+		}
+	}
+	.slogo {
+		display: inline-block;
+		margin: 15px 20px 15px 0;
+	}
+	.organizer {
+		padding: 0;
+		margin: 3rem 0 0 0;
+		@include breakpoint($md) {
+			margin: 0;
+			padding: 0;	
+		}
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+}
+
+
+
+// Project Inner Page
+
+.page-title {
+	font-family: $font-noto;
+	font-weight: 100;
+	font-size: 3rem;
+	text-align: center;
+	line-height: 1.2;
+	margin: 4rem;
+}
+
+.page-featured-image {
+	margin-bottom: 2rem;
+}
+
+#stories {
+
+	margin-top: 4rem;
+
+	h1 {
+		font-size: 2rem;
+		color: $color-blue-dark;
+		margin-bottom: 2rem;
+	}
+	h2 {
+		text-align: center;
+		font-size: 1rem;
+		color: $color-orange;
+		letter-spacing: 3px;
+		margin-bottom: 2rem;
+		margin-top: 3rem;
+	}
+
+}
+
+
+#go {
+
+	.date {
+		font-family: $font-ai;
+		color: $color-blue-dark;
+		font-size: 1.25rem;
+		letter-spacing: 2px;
+		margin: 0;
+		display: block;
+		text-align: center;
+	}
+
+	.go-title {
+		color: $color-orange;
+		margin-bottom: 0;
+		width: 280px;
+		margin-left: -2px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.hashtags {
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		letter-spacing: 4px;
+		color: $color-orange;
+		width: 100%;
+		text-align: center;
+	}
+
+	.slogan {
+		letter-spacing: 2px;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.space {
+		padding: 1rem 0;
+	}
+
+	.topspace {
+		padding: 1rem 0;
+		margin-top: 2rem;
+	}
+
+	.img-note {
+		font-size: 0.75rem;
+		color: $color-brown;
+		letter-spacing: 2px;
+	}
+
+	
+
+	#go-movie-forum {
+		.block-title {
+			margin-top: 0rem;
+		}
+		.forum-context {
+		}
+
+	}
+	
+	
+	.block-title {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: .5rem 0 0.5rem 0;
+		&.green {
+			color: $color-green;
+		}
+	}
+
+	.sub-title {
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+		margin-top: 0rem;
+		&.green {
+			color: $color-green;
+		}
+	}
+
+	.item-title {
+		font-size: 1rem;
+		margin-top: .5rem;
+		padding-top: 1.5rem;
+		margin-bottom: 1rem;
+		color: $color-blue-medium;
+		border-bottom: 1px solid $color-blue-medium;
+	}
+
+	.sub-description {
+		font-size: 0.825rem;
+		line-height: 1.2;
+		letter-spacing: 2px;
+		color: $color-brown;
+		margin-top: 1.5rem;
+		@include breakpoint($md) {
+			margin-top: 0;
+		}
+	}
+
+	.description {
+		margin-bottom: 1rem;
+	}
+
+
+
+
+	#go-realpart-title {
+		.block-title {
+			margin-top: 0rem;
+		}
+	}
+
+	.band {
+		margin-bottom: 2rem;
+	}
+
+	#go-realpart-info {
+		.info {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	#bar-bear-campaign {
+		padding: 2rem;
+		border: 2px solid $color-orange;
+	}
+
+	.bar-bear-kirin {
+		width: 100px;
+		height: auto;
+		display: inline-block;
+		padding-right: 15px;
+	}
+
+	.bar-bear-steps {
+		margin-top: .5rem;
+		color: $color-blue-dark;
+	}
+
+	.bar-bear-nctuartfest {
+		width: 150px;
+		height: auto;
+	}
+
+	#live-movie {
+		position: relative;
+		height: 400px;
+		padding: 0;
+		.movie-bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 5;
+			object-fit: cover;
+			width: 100%;
+			height: 400px;
+		}
+		.movie-inner {
+			position: relative;
+			z-index: 10;
+			color: $bg-color;
+			padding: 2rem;
+		}
+		.info {
+			margin-top: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		.sub-description {
+			position: absolute;
+			padding: 3rem 2rem;
+			right: 0;
+			top: 0;
+			display: none;
+			@include breakpoint($md) {
+				
+			}
+			@include breakpoint($lg) {
+				display: block;
+				width: 400px;
+			}
+			@include breakpoint($xl) {
+				display: block;
+				width: 550px;
+			}
+			text-align: right;
+		}
+	}
+
+
+
+	#go-goods {
+		.block-title {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	.goods-info {
+		margin-top: .5rem;
+		margin-bottom: 1.5rem;
+		.goods-price {
+			color: $color-green;
+			font-size: 0.875rem;
+		}
+		.goods-name {
+			color: $color-blue-dark;
+			font-size: 0.875rem;
+		}
+		.goods-preorder {
+			color: red;
+			
+		}
+	}
+
+	.preorder {
+		padding: 1.5rem 0;
+		text-align: center;
+		@include breakpoint($lg) {
+			text-align: left;
+		}
+		.preorder-button {
+			display: inline-block;
+			float: none;
+			@include breakpoint($lg) {
+				display: block;
+				float: left;
+			}
+			background: $color-pink;
+			padding: .5rem 1.25rem;
+			font-weight: 700;
+			letter-spacing: 5px;
+			border-radius: .25rem;
+			color: $bg-color;
+			transition: 0.07s;
+			&:hover {
+				background: lighten($color-pink, 10);
+				text-decoration: none;
+			}
+			&.orange {
+				background: $color-orange;
+				&:hover {
+					background: lighten($color-orange, 10);
+					text-decoration: none;
+				}
+			}
+		}
+		.preorder-info {
+			margin-left: 0;
+			margin-top: 1.5rem;
+			float: none;
+			@include breakpoint($lg) {
+				float: left;
+				margin-top: 0;
+				margin-left: 1.5rem;
+			}
+			line-height: 1.7;
+			@include breakpoint($md) {
+				line-height: 1.4rem;
+			}
+			
+		}
+	}
+	
+	#go-eats {
+		margin: 1rem -15px;
+		padding: 2rem 1rem;
+		@include breakpoint($xs) {
+			margin: 3rem 0;
+			padding: 2rem 2rem;	
+		}
+		@include breakpoint($lg) {
+			margin: 3rem 0;
+			padding: 4rem 2rem;	
+		}
+		border-radius: .25rem;
+		background: rgba($color-orange, 0.05);
+		text-align: center;
+		@include breakpoint($lg) {
+			text-align: left;
+		}
+		.promote-title {
+			font-size: 1.25rem;
+			font-weight: 300;
+			line-height: 1.75rem;
+		}
+		.eats-image {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	
+
+
+	.intro-img {
+		object-fit: cover;
+		width: 100%;
+		height: 300px;
+		@include breakpoint($xl) {
+			height: 300px;
+		}
+	}
+
+	.go-nightmarket {
+		position: relative;
+	}
+
+	.nightmarket-inner {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		font-size: 1.5rem;
+		color: $bg-color;
+	}
+
+	.nightmarket-img {
+		object-fit: cover;
+		width: 100%;
+		height: 250px;
+	}
+
+	.place {
+		display: inline-block;
+		// font-size: 0.875rem;
+		color: $color-orange;
+		&.block {
+			display: block;
+			margin-top: .5rem;
+			margin-bottom: 1rem;
+		}
+		i {
+			margin-right: 0.25rem;
+		}
+	}
+
+}
+
+
+#artpassport {
+	margin-top: 4rem;
+	.block-title {
+		margin-top: .5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+#related {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding: 2rem 0;
+	border-top: 1px solid $color-brown;
+	border-bottom: 1px solid $color-brown;
+	text-align: center;
+	@include breakpoint($md) {
+		text-align: left;
+	}
+	.related-title {
+		font-size: 1rem;
+		letter-spacing: 3px;
+		font-weight: 300;
+		margin-bottom: .5rem;
+	}
+	.related-main {
+		margin-bottom: 1.5rem;
+		a {
+			color: $color-orange;
+			&:hover {
+				text-decoration: none;
+				color: lighten($color-orange, 10);
+			}
+		}
+	}
+	.related-list {
+		margin: 0 0 1rem 0;
+		padding: 0;
+		.related-item {
+			font-weight: 300;
+			list-style: none;
+			display: block;
+			a {
+				color: $color-brown;
+				&:hover {
+					color: lighten($color-brown, 10);
+					text-decoration: none;
+				}	
+			}
+			
+		}
+	}
+}
+
+#go-movie {
+	.info {
+		font-size: 0.9rem;
+	}
+	.movie-single {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.info-name {
+	font-size: 0.875rem;
+	color: $color-blue-dark;
+	letter-spacing: 3px;
+	margin: 1rem 0 .5rem 0;
+	a {
+		color: $color-blue-dark;
+		&:hover {
+			color: lighten($color-blue-dark, 10);
+			text-decoration: none;
+		}
+	}
+	&.brown {
+		color: $color-brown;
+	}
+	&.green {
+		color: $color-green;
+	}
+}
+
+#sproject {
+	.place {
+		display: inline-block;
+		// font-size: 0.875rem;
+		color: $color-orange;
+		&.block {
+			display: block;
+			margin-top: .5rem;
+			margin-bottom: 1rem;
+		}
+		i {
+			margin-right: 0.25rem;
+		}
+	}
+	.sproject-title {
+		font-size: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+		color: $color-orange;
+	}
+}
+
+

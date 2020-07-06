@@ -1,0 +1,21 @@
+{
+  "name": "nctuaf2-web",
+  "version": "1.0.0",
+  "description": "website for NTCU Art Festival",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yqkqknct/NCTUAF2-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yqkqknct/NCTUAF2-Web/issues"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "breakpoint-sass": "^2.7.1"
+  }
+}
