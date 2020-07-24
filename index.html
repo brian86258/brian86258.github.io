@@ -1,338 +1,196 @@
-<!-- <!DOCTYPE html> -->
-<html>
-<head>
-	<meta charset="utf-8">
- 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="assets/styles/app.css?ver=1.2">
-	<link rel="shortcut icon" type="image/x-icon" href="assets/images/common/logo.png" />
-
-	<title>2018 交大藝趣節 － Authentic Identity | NCTU Art Festival</title>
-
-	<meta property="og:locale" content="zh_TW" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="2018 交大藝趣節 － Authentic Identity | NCTU Art Festival" />
-	<meta property="og:description" content="身為一個真實的人，什麼是我們存在於世界上無可取代、獨一無二的特質？身處於紛亂的、日新月異的時代，每一個人的真實身份又是什麼？" />
-	<meta property="og:url" content="https://nctuartfest.org/" />
-	<meta property="og:site_name" content="2018 交大藝趣節" />
-	<meta property="fb:app_id" content="175525533077105" />
-	<meta property="og:image" content="https://nctuartfest.org/assets/images/og/index.png" />
-
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-K5MBBWT');</script>
-	<!-- End Google Tag Manager -->
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5MBBWT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<script>
-	$(function(){
-		var height = $('this').scrollTop();
-			console.log(height);
-  		$(window).scroll(function(){
-
-			var height = $('this').scrollTop();
-			console.log(height);
-			if ( height > 500) {
-				$('body').addClass('nav-scroll');
-			} else {
-				$('body').removeClass('nav-scroll');
-			}
-		});
-	});
-</script>
-
-	<!-- fixed header -->
-	<header class="fixed-nav">
-		<div class="container">
-			<nav class="navbar navbar-expand-lg nav-padding">
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="50" height="50"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="go.html">藝趣生活週</a><small class="nav-item-new">NEW</small></li>
-						<li class="nav-item"><a class="nav-link" href="goods.html">週邊商品</a><small class="nav-item-new">NEW</small></li>
-						<!-- <li class="nav-item"><a class="nav-link" href="eats.html">激省餐盒</a><small class="nav-item-new">NEW</small></li> -->
-						<li class="nav-item"><a class="nav-link" href="projects.html">六大專案</a></li>
-						<li class="nav-item"><a class="nav-link" href="stories.html">主線故事</a></li>
-						<li class="nav-item"><a class="nav-link" href="stamp.html">藝文護照集章／手作吊飾</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-
-	<!-- end fixed header -->
-	
-	<section id="topic">
-		<div class="container">
-			<div class="row justify-content-center align-items-center">
-				<div class="offset-lg-1 col-lg-4 col-md-5">
-					<div class="topic-content">
-						<div class="year">2018</div>
-						<img src="assets/images/nctuartfests.svg" alt="交大藝趣節" class="topic">
-						<div class="topic-english">AUTHENTIC IDENTITY</div>
-						<div class="date">04/08 <span class="date-line"></span> 05/13</div>
-						<div class="place">交通大學校園各處</div>
-					</div>
-				</div>
-				<div class="col-offset-lg-1 col-lg-5 col-md-7">
-					<img src="assets/images/sketch.png" alt="機器人">
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section class="container" id="intro">
-		<!-- introduction -->
-		<div class="row">
-			<div class="col-md-12 col-lg-5 text-center justify-content-center">
-				<img src="assets/images/i-robot.png" class="intro-img" alt="AUTHENTIC IDENTITY">
-			</div>
-			<div class="col-md-12 col-lg-7">
-				<h2 class="intro-title">
-					AI — AUTHENTIC IDENTITY
-				</h2>
-				<div class="intro-content">
-					<p>「感受、衝突、創造」</p>
-					<p>人類感受、產生衝突，進而創造。<br>
-					人類擁有自由的意志，可能出錯、不可預期，所以「感受、衝突、創造」這樣的過程可能無時無刻不斷循環，不斷交互影響，不斷推使人類前進。</p>
-					<p>找尋自我身分的思考方向因人而異，不僅限於「人」與「非人」間的對話，更延伸至社會框架下的自我掙扎、現實與理想間自我實現的拉鋸......不論藉由光影下的詩句、置身眾林卻又獨樹一幟的裝置藝術、電影、音樂或是文字，交大藝趣節希望為觀眾帶來不同的藝術體驗甚至思考啟發，在感受情緒、體驗創造的過程中發現身而為人獨有的特質，思考身為「真實的人」的價值。</p>
-					<p>是否想過，身而為人，我們獨有的特質是什麼？<br>
-					是否想過，曾幾何時，我們忘了自己的夢想、遺漏了靈魂，剩下軀殼，彷彿機器人？</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<script>
-		$(function(){
-			$('.scroll').scrollLeft('300');
-		});
-	</script>
-	
-	<section class="container" id="timeline">
-		<h2 class="block-title text-center">Timeline</h2>
-		<div class="scroll">
-			<div class="inner">
-				<div class="axis"></div>
-				<div class="highlight-area"></div>
-
-				<div class="date ml-3">4/8</div>
-				<div class="name feature ml-3">非人報</div>
-				<div class="date"></div>
-				<div class="name">人造雨╱Being╱Emergence</div>
-				<div class="date reverse mx-3">4/29</div>
-				<div class="name feature mx-3">野台／影展／非人報</div>
-				<div class="date reverse">5/1</div>
-				<div class="name feature">影展</div>
-				<div class="date reverse">5/2</div>
-				<div class="name lecture">講座</div>
-				<div class="date reverse mr-3">5/3</div>
-				<div class="name feature mr-3">影展</div>
-				<div class="date mr-3 text-right">5/13</div>
-				<div class="name mr-3">人造雨／Being／Emergence</div>
-
-				<div class="slogan">藝趣生活週 × 音樂 × 市集 × 電影</div>
-				<div class="intro text-left"> 
-					文創市集／孔雀眼／甜約翰／顯然樂隊／行者義剪／交大吉他社／交大口琴社／畢業歌 With you／⋯⋯
-				</div>
-			</div>
-		</div>
-
-	</section>
-
-	<section class="container" id="projects">
-		<!-- projects list -->
-		<h2 class="block-title text-center">六大專案</h2>
-		<div class="row">
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="realpart.html"><img class="preview" src="assets/images/野台.png" width="100%"></a>
-				<h2 class="project-title"><a href="realpart.html">《Real Part》－ 音樂野台</a></h2>
-				<div class="project-description">
-					<p>複數包含 Real Part 以及 Imaginary Part ，分別詮釋為人內心最深層的實部，以及為了符合社會期待所展現的虛部。藉由這個舞台、藉由表演者的故事敘述，讓每個演出背後的故事最真實的呈現。 </p>
-
-					<p>邀請校內外團體演出，以最直接、最平易近人卻最動人的方式為交大人帶來音樂饗宴，盡情享受、感受作品中、個人心中的衝突，欣賞創作。</p>
-				</div>
-				<div class="project-info">
-					音樂野台：4/29 13:00 - 17:30<br>
-					文創市集：4/29 12:00 - 20:00、4/30 5/1 11:00 - 18:00
-					<span class="place block"><i class="fas fa-map-marker"></i> 浩然圖書館前廣場</span>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="human.html"><img class="preview" src="assets/images/影展.jpg" width="100%"></a>
-				<h2 class="project-title"><a href="human.html">「人?」– 影展</a></h2>
-				<div class="project-description">
-					<p>我們想要藉著舉辦一個影展，營造一個適合思考的觀影環境，讓與會者觀賞某些特別挑選的電影，使大家去思考人的本質，或許能多少改變自己思考，也改變自己看待人事物的方式。</p>
-					<p>有時影像的刺激勝過語言，或許那些對詩和文字沒有特別感覺的人，能在我們精心準備的影展中得到一些收穫。</p>
-				</div>
-				<div class="project-info">
-					露天電影院：4/29 18:00 - 23:00
-					<span class="place block"><i class="fas fa-map-marker"></i> 浩然圖書館前廣場</span>
-
-					室內影展：5/1 18:00 - 21:00，5/3 17:30 - 22:00
-					<span class="place block"><i class="fas fa-map-marker"></i> 人社二館 F326</span>
-
-					電影講座：5/2 19:00 - 21:00 (18:30 開始入場)
-					<span class="place block"><i class="fas fa-map-marker"></i> 工程四館合勤講堂</span>
-
-				</div>
-			</div>
-			<div class="clearfix d-block d-sm-none"></div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="publication.html"><img class="preview" src="assets/images/publication.jpg" width="100%"></a>
-				<h2 class="project-title"><a href="publication.html">《非人報》- 藝趣節刊物</a></h2>
-				<div class="project-description">
-					<p>文字是雋永的語言，藉由文字寫下與交大人有關、與新竹有關的故事。身而為人，交大人，我們是否與眾不同？</p>
-					<p>在這以科技領域著稱的校園裡，“人”存在的價值是否因此而貶或升值？</p>
-				</div>
-				<div class="project-info">
-					發行第一期：4/8，第二期：4/29
-					<span class="place block"><i class="fas fa-map-marker"></i> 索取地點：二餐多多、小七前、華通書局、交大應藝所、一餐萊爾富、小木屋、奶油廚房、女二全家前、藝文空間、米諾瓦、LALA、清大水木書苑、蘇格貓底二手咖啡屋、江山藝改所、柒拾壹、開門工作室</span><br>
-				</div>
-			</div>
-			<div class="clearfix d-none d-md-block"></div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="being.html"><img class="preview" src="assets/images/being.jpg" width="100%"></a>
-				<h2 class="project-title"><a href="being.html">《Being》– 裝置藝術</a></h2>
-				<div class="project-description">
-					<p>Being以樹的形態出現，卻又獨樹一幟，對比周遭的樹，呈現強烈的外觀及形體變化。一系列的轉變彷彿掙扎，而找尋自我的意志就如佇立的枝幹般堅定。</p>
-	
-					<p>希望觀賞者藉由視覺觸及心靈感受，獲得啟發，思考真實的自我，尋找、確立芸芸眾生中自我獨特、無可取代的價值。</p>
-				</div>
-				<div class="project-info">
-					展出日期：4/8 ~ 5/13
-					<span class="place block"><i class="fas fa-map-marker"></i> 浩然圖書館後草皮</span>
-				</div>
-			</div>
-			<div class="clearfix d-block d-sm-none"></div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="minstrels-tears.html"><img class="preview" src="assets/images/minstrels_tears.jpg" width="100%"></a>
-				<h2 class="project-title"><a href="minstrels-tears.html">《人造雨》 － 詩淚計畫</a></h2>
-				<div class="project-description">
-					<p>詩一直是乘載人類情緒的介質，當你哭不出來的時候，請讓詩來替你流淚。</p>
-					<p>人透過情感可以找回真實自我，而詩可以反映出我們的情緒，所以我們希望能透過詩使大家體察真實的自己所擁有情緒。</p>
-				</div>
-				<div class="project-info">
-					展出日期：4/8 ~ 5/13
-					<span class="place block"><i class="fas fa-map-marker"></i> 浩然圖書館 B1 入口</span>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
-				<a href="emergence.html"><img class="preview" src="assets/images/emergence.jpg" width="100%"></a>
-				<h2 class="project-title"><a href="emergence.html">《Emergence》 － 裝置藝術</a></h2>
-				<div class="project-description">
-					<p>以水面類比於人的群體，以泡沫類比於個人的身份，而「水面」、「泡沫」和「陸地」的三個空間層次，對應到人的三個狀態。</p>
-					<p>人由被動轉向主動，逐漸擁有自己的意識、省思自我的存在價值。 泡沫中存在抽象的人形，彷彿是孕育生命的卵。這是建構身分的過度階段，呈現生命意識的覺醒。最後，從卵中掙脫、離開水面而登上陸地的人形，象徵了找回真實自我、獲得解放的個人。</p>
-				</div>
-				<div class="project-info">
-					展出日期：4/8 ~ 5/13
-					<span class="place block"><i class="fas fa-map-marker"></i> 交通大學竹湖</span>
-				</div>
-			</div>
-		</div>
-		<!-- projects list end -->
-	</section>
-
-
-	<div class="container">
-		<section id="related">
-		
-			<div class="row">
-				<div class="col-12 col-md">
-					<div class="related-title related-main">
-						<a href="index.html">2018 交大藝趣節<br>
-						<span class="ai">AUTHENTIC IDENTITY</span></a>
-					</div>
-					
-				</div>
-				<div class="col-12 col-md">
-					<div class="related-title">六大專案</div>
-					<ul class="related-list">
-						<li class="related-item"><a href="realpart.html">Real Part / 音樂野台</a></li>
-						<li class="related-item"><a href="human.html">人？ / 影展</a></li>
-						<li class="related-item"><a href="publication.html">非人報 / 藝趣節刊物</a></li>
-						<li class="related-item"><a href="being.html">Being / 裝置藝術</a></li>
-						<li class="related-item"><a href="minstrels-tears.html">人造雨 / 詩淚計畫</a></li>
-						<li class="related-item"><a href="emergence.html">Emergence / 裝置藝術</a></li>
-					</ul>
-				</div>
-				<div class="col-12 col-md">
-					<div class="related-title">特別活動</div>
-					<ul class="related-list">
-						<li class="related-item"><a href="go.html">藝趣生活週</a></li>
-						<li class="related-item"><a href="goods.html">週邊商品</a></li>
-						<!-- <li class="related-item"><a href="eats.html">激省餐盒</a></li> -->
-					</ul>
-				</div>
-				<div class="col-12 col-md">
-					<div class="related-title">關於藝趣節</div>
-					<ul class="related-list">
-						<li class="related-item"><a href="stories.html">主線故事</a></li>
-						<li class="related-item"><a href="stamp.html">藝文護照集章／手作吊飾</a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-	</div>
-
-	<footer>
-		<div class="container">
-			<div class="media">
-				<div class="mr-5 facebook">
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/NCTUArtFest/&tabs=timeline&width=280&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2448538618705290" style="width:280px;height:300px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-				</div>
-  				<div class="media-body">
-					<ul class="organizer">
-						<li class="organizer-main">主辦單位｜2018 交大藝趣節團隊</li>
-						<li class="organizer-support">
-							指導單位｜
-							<a href="https://acc.nctu.edu.tw" target="_blank">交通大學藝文中心</a>、<a href="http://activity.sa.nctu.edu.tw" target="_blank">課外活動組</a>
-						</li>
-						<li class="organizer-support">
-							協辦單位｜
-							<a href="http://ict.nctu.edu.tw/?p=936">機器人水上裝置藝術微學分課程</a>、<a href="https://www.spring.org.tw/" target="_blank">財團法人交大思源基金會</a>、<a href="https://stunion.nctu.edu.tw" target="_blank">交通大學學聯會</a>
-						</li>
-						<li class="organizer-support">
-							補助單位｜
-							<a href="http://secretariat.nctu.edu.tw/" target="_blank">交通大學秘書室</a>、<a href="http://www.ga.nctu.edu.tw/" target="_blank">總務處</a>、<a href="http://activity.sa.nctu.edu.tw" target="_blank">學務處</a>、<a href="http://www.alumni.nctu.edu.tw/index.aspx" target="_blank">交大校友總會</a>
-						</li>
-						<li class="organizer-support">
-							特別感謝｜ <br><a href="http://www.pmma.url.tw/index.aspx" class="slogo" >亮彩光纖(來宥翔企業有限公司)</a>
-							<a href="http://doc.tstartel.com/u25student/" target="_blank"><img src="assets/images/support/台灣之星.png" alt="台灣之星" class="slogo" width="100"></a>
-							<a href="http://chuhu.landishotelsresorts.com/chinese-trad/index.php" target="_blank"><img src="assets/images/support/竹湖暐順.png" alt="竹湖瑋順麗緻文旅" class="slogo" width="100"></a>
-							<a href="http://www.jusun.com.tw/" target="_blank"><img src="assets/images/support/志尚儀器.png" alt="志尚儀器股份有限公司" class="slogo" width="150"></a>
-							<img src="assets/images/support/邱再興文教基金會.png" alt="財團法人邱再興文教基金會"  class="slogo" width="200">
-							<a href="https://www.kirin.com.tw/" target="_blank"><img src="assets/images/support/Kirin.png" alt="KIRIN 台灣麒麟" class="slogo" width="120"></a>
-							<a href="https://www.kirin.com.tw/ichiban/" target="_blank"><img src="assets/images/support/Kirin-Ichiban.png" alt="KIRIN 一番搾啤酒" class="slogo" width="130"></a>
-							
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="copyright">2018 交大藝趣節團隊</div>
-		</div>
-		<!-- footer sketch end -->
-
-
-	</footer>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"
+                ><span class="d-block d-lg-none">Clarence Taylor</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span></a
+            ><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">Clarence <span class="text-primary">Taylor</span></h1>
+                    <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 · <a href="mailto:name@email.com">name@email.com</a></div>
+                    <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a><a class="social-icon" href="#"><i class="fab fa-github"></i></a><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Senior Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Junior Web Designer</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Design Intern</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Colorado Boulder</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science - Web Development Track</div>
+                            <p>GPA: 3.23</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">James Buchanan High School</h3>
+                            <div class="subheading mb-3">Technology Magnet Program</div>
+                            <p>GPA: 3.56</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>Agile Development & Scrum
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Google Analytics Certified Developer
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Mobile Web Specialist - Google Certification
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>1<sup>st </sup>Place - University of Colorado Boulder - Emerging Tech Competition 2009
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>1<sup>st </sup>Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>2<sup>nd </sup>Place - University of Colorado Boulder - Emerging Tech Competition 2008
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>1<sup>st </sup>Place - James Buchanan High School - Hackathon 2006
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>3<sup>rd </sup>Place - James Buchanan High School - Hackathon 2005
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
