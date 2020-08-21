@@ -10137,22 +10137,17 @@ section.resume-section .resume-section-content {
 /* Photo slide */
 #slide {
   position: relative;
-  max-width: 100%;  
-  max-height: 100%;     
-  width: auto;  
-  height: auto;  
-
+  max-width: 800px;
 }
 #slide img {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
+  width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
-  
-
 }
 #slide img:first-child {
   position: static;
@@ -10200,22 +10195,17 @@ section.resume-section .resume-section-content {
 /* slide2 */
 #slide2 {
   position: relative;
-  max-width: 100%;  
-  max-height: 100%;     
-  width: auto;  
-  height: auto;  
-
+  max-width: 800px;
 }
 #slide2 img {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
+  width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
-  
-
 }
 #slide2 img:first-child {
   position: static;
@@ -10224,7 +10214,7 @@ section.resume-section .resume-section-content {
   opacity: 1;
   visibility: visible;
 }
-#slide2 .prev, #slide .next {
+#slide2 .prev, #slide2 .next {
   display: block;
   position: absolute;
   top: 50%;
@@ -10234,10 +10224,10 @@ section.resume-section .resume-section-content {
   background-color: rgba(0, 0, 0, 0.12);
   padding: 14px 12px;
 }
-#slide2 .prev:hover, #slide .next:hover {
+#slide2 .prev:hover, #slide2 .next:hover {
   background-color: rgba(0, 0, 0, 0.24);
 }
-#slide2 .prev:after, #slide .next:after {
+#slide2 .prev:after, #slide2 .next:after {
   display: block;
   content: "";
   width: 10px;
@@ -10262,22 +10252,17 @@ section.resume-section .resume-section-content {
 /* slide3 */
 #slide3 {
   position: relative;
-  max-width: 100%;  
-  max-height: 100%;     
-  width: auto;  
-  height: auto;  
-
+  max-width: 800px;
 }
 #slide3 img {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
+  width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
-  
-
 }
 #slide3 img:first-child {
   position: static;
@@ -10286,7 +10271,7 @@ section.resume-section .resume-section-content {
   opacity: 1;
   visibility: visible;
 }
-#slide3 .prev, #slide .next {
+#slide3 .prev, #slide3 .next {
   display: block;
   position: absolute;
   top: 50%;
@@ -10296,10 +10281,10 @@ section.resume-section .resume-section-content {
   background-color: rgba(0, 0, 0, 0.12);
   padding: 14px 12px;
 }
-#slide3 .prev:hover, #slide .next:hover {
+#slide3 .prev:hover, #slide3 .next:hover {
   background-color: rgba(0, 0, 0, 0.24);
 }
-#slide3 .prev:after, #slide .next:after {
+#slide3 .prev:after, #slide3 .next:after {
   display: block;
   content: "";
   width: 10px;
