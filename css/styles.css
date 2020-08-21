@@ -10134,3 +10134,60 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+/* Photo slide */
+#slide {
+  position: relative;
+  max-width: 600px;
+}
+#slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+#slide img:first-child {
+  position: static;
+}
+#slide img.show {
+  opacity: 1;
+  visibility: visible;
+}
+#slide .prev, #slide .next {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 14px 12px;
+}
+#slide .prev:hover, #slide .next:hover {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+#slide .prev:after, #slide .next:after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+#slide .prev {
+  left: 0;
+}
+#slide .prev:after {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+#slide .next {
+  right: 0;
+}
+#slide .next:after {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
