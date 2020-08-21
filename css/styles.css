@@ -10144,10 +10144,15 @@ section.resume-section .resume-section-content {
   top: 0;
   left: 0;
   display: block;
-  width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
+  
+  max-width: 100%;  
+  max-height: 100%;     
+  width: auto;  
+  height: auto;  
+
 }
 #slide img:first-child {
   position: static;
