@@ -42,7 +42,7 @@
 
     // SLIDE
     var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
-    slide = document.querySelector('#slide'),
+    slide = document.querySelector('#slide2'),
     items = slide.querySelectorAll('img'), // 抓取所有 img
     itemsCount = items.length, // 圖片總數 
     prevBtn = document.createElement('a'), // 上一張按鈕
