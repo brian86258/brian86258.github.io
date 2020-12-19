@@ -40,6 +40,13 @@
         target: "#sideNav",
     });
 
+    // Toggle Digital Portfolio
+    $('.toggler').click(function(){
+        $(this).parent().children().toggle();  //swaps the display:none between the two spans
+        $(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+      
+    });
+
     // SLIDE1
     var counter = 0, // 一開始要顯示的圖，0 的話就是顯示第一張
     slide = document.querySelector('#slide'),
